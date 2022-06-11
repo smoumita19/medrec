@@ -1,0 +1,244 @@
+<html>
+<head>
+<title>Menu</title>
+	<LINK href="styles.css" type="text/css" rel="stylesheet">
+
+</head>
+<BODY class=SC>
+<!-- <script language="JavaScript1.2" src="coolfunctions.js"></script>
+<script language="JavaScript1.2" src="coolmenus.js"></script> -->
+<style>
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: rgb(233, 233, 233,0.3);
+	}
+	
+	li {
+	  float: left;
+	}
+	
+	li a {
+	  display: block;
+	  color: rgb(55 145 229);
+	  text-align: center;
+	  padding: 14px 16px;
+	  font-size: 16px!important;  
+	  font-weight: 500!important;
+	  text-decoration: none;
+	}
+	
+	li a:hover:not(.active) {
+		color: white;
+	  background-color: rgb(55 145 229);
+	}
+	
+	.dropdown {
+  	  float: left;
+      overflow: hidden;
+	}
+
+	.dropdown .dropbtn {
+  	  font-size: 16px;  
+      border: none;
+      outline: none;
+      color: rgb(55 145 229);
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+	}
+
+	.navbar a:hover, .dropdown:hover .dropbtn {
+	  background-color: rgb(55 145 229);
+	  color: white;
+	}
+
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: #f9f9f9;
+	  min-width: 160px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+
+	.dropdown-content a {
+	  float: none;
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	.dropdown-content a:hover {
+	background-color: #ddd;
+	}
+
+	.dropdown:hover .dropdown-content {
+	display: block;
+	}
+
+	.fixed-img {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+	}
+</style>
+<ul id="dontPrint">
+	
+	<!-- <li><a href="./Report.jsp"><img src="./images/logo-2.png" border=0 alt="" width="30px"></a></li> -->
+
+	<li><a href="./Report.jsp">Home</a></li>
+	<div class="dropdown">
+		<button class="dropbtn">Doctors
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="./ViewDoctors.jsp">View Doctors</a>
+		  <a href="./NewDoctor0.jsp">New Doctor</a>
+		</div>
+	</div> 
+	<div class="dropdown">
+		<button class="dropbtn">Patients 
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="./ViewPatients.jsp">View Patients</a>
+		  <a href="./NewPatient0.jsp">New Patient</a>
+		</div>
+	</div> 
+	<div class="dropdown">
+		<button class="dropbtn">Appointments
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="./ViewAppointments.jsp">View Appointments</a>
+		  <a href="./AddAppointments0.jsp">Add Appointments</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">Rooms
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="./ViewRooms.jsp">View Rooms</a>
+		  <a href="./NewRoom0.jsp">Add Room</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">Discharges
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="./ViewDischarges.jsp">View Discharges</a>
+		  <a href="./NewDischarges0.jsp">New Patient</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">Insurance
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="./ViewInsurances.jsp">View Insurances</a>
+		  <a href="./NewInsurance0.jsp">New Insurance</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">Reports
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="./DoctorsSchedule0.jsp">Doctors</a>
+		  <a href="./AppointmentsReport0.jsp">Appointment</a>
+		  <a href="./DischargesReport0.jsp">Discharges</a>
+		  <a href="./InpatientsReport0.jsp">Inpatients</a>
+		  <a href="./GenerateBillReport0.jsp">GenerateBill</a>
+		  <a href="./InsurancesReport0.jsp">Insurances</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">Admin
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="./ViewUsers.jsp">View Users</a>
+		  <a href="./DeleteUser0.jsp">Delete Users</a>
+		</div>
+	</div>
+	<li><a href="./Logout.jsp">Logout</a></li>
+</ul>
+<div class="fixed-img">
+	<img src="./images/logo-3.png" border=0 alt="" >
+
+</div>
+
+</body>
+<script>
+	
+function printTable(){
+
+//let dontPrintContents = document.querySelector("dontPrint");
+
+//let dontPrintContents =
+document.getElementById("dontPrint").style.display = "none";
+var titles = document.getElementsByClassName("title");
+   for (var i = 0; i < titles.length; i++) {
+   //Distribute(slides.item(i));
+   titles.item(i).style.fontSize = "8pt";
+
+}
+
+var tblDataAll = document.getElementsByClassName("tblData");
+   for (var i = 0; i <  tblDataAll.length; i++) {
+   //Distribute(slides.item(i));
+   tblDataAll.item(i).style.fontSize = "8pt";
+
+}
+
+
+//  if(dontPrintContents != null) {
+// 	dontPrintContents.style.display = none;
+
+//  }
+
+//document.getElementById("printTable").style.width = "200px";
+//Change the font size
+
+//  document.body.innerHTML = 
+//       "<html><head><title></title></head><body>" + 
+// 		printContents + "</body>";
+
+//document.body.innerHTML = printContents;
+
+
+window.print();
+
+//document.body.innerHTML = originalContents;
+document.getElementById("dontPrint").style.display = "block";
+
+var titles = document.getElementsByClassName("title");
+   for (var i = 0; i < titles.length; i++) {
+   //Distribute(slides.item(i));
+   titles.item(i).style.fontSize = "11pt";
+
+}
+
+var tblDataAll = document.getElementsByClassName("tblData");
+   for (var i = 0; i <  tblDataAll.length; i++) {
+   //Distribute(slides.item(i));
+   tblDataAll.item(i).style.fontSize = "11pt";
+
+}
+
+
+//dontPrintContents.style.display = "block";
+
+
+   //javascipt:window.print()
+}
+</script>
+</html>
