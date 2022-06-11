@@ -11,11 +11,11 @@
 
 <title>Doctors List</title>
 <SCRIPT LANGUAGE="JavaScript">
-<!--
+
 history.go(+1);
 
 
-//-->
+
 </SCRIPT>
 </HEAD>
 <jsp:include page="MultiLevelmenu.htm"/><br><br><br>
@@ -95,7 +95,7 @@ if(rs!=null)
 	<th class=row_title><a class=title href="ViewDoctors.jsp?orderby=DoctorID">Doctor ID</a></th>
 	<th class=row_title><a class=title href="ViewDoctors.jsp?orderby=DateOfJoin">Date Of Join</a></th>
 	<th class=row_title><a class=title href="ViewDoctors.jsp?orderby=Designation">Designation</a></th>
-	<th class=row_title><a class=title href="ViewDoctors.jsp?orderby=PhoneNumber">PhoneNumber</a></th>
+	<th class=row_title><a class=title href="ViewDoctors.jsp?orderby=PhoneNumber">Phone Number</a></th>
 	<th class=row_title><a class=title href="ViewDoctors.jsp?orderby=Experience">Experience</a></th>
 	<th class=row_title><a class=title href="ViewDoctors.jsp?orderby=HolidayinWeek">Holiday in Week</a></th>
 	<th class=row_title><a class=title href="ViewDoctors.jsp?orderby=WorkingHours">Working Hours</a></th>
@@ -120,15 +120,15 @@ int DisRow=0;
 	DisRow++;
 	%>
 	<tr class= <%=(DisRow%2!=0)? "row_even" : "row_odd"%>>
-		<td align=center class="tblData"><%= DoctorName%></td>
-		<td align=center class="tblData"><%= DoctorID%></td>
-		<td align=center class="tblData"><%= DateOfJoin%></td>
-		<td align=center class="tblData"><%= Designation%></td>
-		<td align=center class="tblData"><%= PhoneNumber%></td>
-		<td align=center class="tblData"><%= Experience%></td>
-		<td align=center class="tblData"><%= HolidayinWeek%></td>
-		<td align=center class="tblData"><%= WorkingHours%></td>
-		<td align=center class="tblData"><%= ChargesPerHour%></td>
+		<td align=center class="tblData"><%=DoctorName%></td>
+		<td align=center class="tblData"><%=DoctorID%></td>
+		<td align=center class="tblData"><%=DateOfJoin%></td>
+		<td align=center class="tblData"><%=Designation%></td>
+		<td align=center class="tblData"><%=PhoneNumber%></td>
+		<td align=center class="tblData"><%=Experience%></td>
+		<td align=center class="tblData"><%=HolidayinWeek%></td>
+		<td align=center class="tblData"><%=WorkingHours%></td>
+		<td align=center class="tblData"><%=ChargesPerHour%></td>
 		
 	<%
 	}
@@ -153,69 +153,6 @@ if(DisRow==0)
 </table>
 </form>
 </BODY>
-<script>
-	function printTable(){
-
-	 //let dontPrintContents = document.querySelector("dontPrint");
-
-     //let dontPrintContents =
-	 document.getElementById("dontPrint").style.display = "none";
-	 var titles = document.getElementsByClassName("title");
-		for (var i = 0; i < titles.length; i++) {
-		//Distribute(slides.item(i));
-		titles.item(i).style.fontSize = "8pt";
-
-	 }
-
-	 var tblDataAll = document.getElementsByClassName("tblData");
-		for (var i = 0; i <  tblDataAll.length; i++) {
-		//Distribute(slides.item(i));
-		tblDataAll.item(i).style.fontSize = "8pt";
-
-	 }
-
-
-	//  if(dontPrintContents != null) {
-	// 	dontPrintContents.style.display = none;
-
-	//  }
-
-	//document.getElementById("printTable").style.width = "200px";
-    //Change the font size
-
-	//  document.body.innerHTML = 
-    //       "<html><head><title></title></head><body>" + 
-	// 		printContents + "</body>";
-
-     //document.body.innerHTML = printContents;
-
-
-     window.print();
-
-     //document.body.innerHTML = originalContents;
-	 document.getElementById("dontPrint").style.display = "block";
-
-	 var titles = document.getElementsByClassName("title");
-		for (var i = 0; i < titles.length; i++) {
-		//Distribute(slides.item(i));
-		titles.item(i).style.fontSize = "11pt";
-
-	 }
-
-	 var tblDataAll = document.getElementsByClassName("tblData");
-		for (var i = 0; i <  tblDataAll.length; i++) {
-		//Distribute(slides.item(i));
-		tblDataAll.item(i).style.fontSize = "11pt";
-
-	 }
-
-
-	 //dontPrintContents.style.display = "block";
-
-
-		//javascipt:window.print()
-	}
-</script>
 </HTML>
 <%
   }

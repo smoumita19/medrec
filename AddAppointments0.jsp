@@ -152,7 +152,7 @@ else{
 	   
 	   	  
 	   <TR class=row_odd >
-	   <TD>Designation*</TD>
+	   <TD>Designation *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Designation" SIZE="20" ></TD>
 	   </TR>
 
@@ -203,7 +203,7 @@ else{
 		<TD><INPUT TYPE="TEXT" NAME="Cost" ID="Cost" SIZE="20" ></TD>
 		</TR>
    
-	   <TR class=row_even  ALIGN="CENTER">
+	   <TR class=row_odd  ALIGN="CENTER">
 			<TD><INPUT TYPE="SUBMIT" VALUE="Add" class="form-button"></TD>
 			<TD><INPUT TYPE="RESET" VALUE="Reset" class="form-button"></TD>
 		</TR>

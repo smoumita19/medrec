@@ -87,7 +87,7 @@ history.go(+1);
   <BR><BR>
   &nbsp;&nbsp;&nbsp;&nbsp;
 
-  Userid   :&nbsp;<input TYPE=text id = "usr" name=uid size="8" maxlength="8" class="form-group"> <BR><BR>
+  User Id   :&nbsp;<input TYPE=text id = "usr" name=uid size="8" maxlength="8" class="form-group"> <BR><BR>
   Password : <input TYPE=password name=pwd size="8"  maxlength="8" class="form-group"><BR><BR>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -99,11 +99,11 @@ history.go(+1);
   </center>
 
   </FORM>
-  <div class="signup-div text-center">
+  <!-- <div class="signup-div text-center">
     <br><br><br><br>
     Are you an Admin? <br><br>
      <A href="./signup.jsp">SIGN UP!</A> 
-  </div>
+  </div> -->
 </div>
 </BODY>
 </HTML>

@@ -30,7 +30,7 @@
 </TR>
 
 <TR class=row_even>
-	<TD>Userid</TD>
+	<TD>User Id</TD>
 	<TD><input TYPE=text name=uid size="8" value="<%=Userid%>" readonly></TD>
 </TR>
 <TR class=row_odd>
@@ -39,7 +39,7 @@
 </TR>
 <TR class=row_even>
 	<TD>New Password </TD>
-	<TD><input TYPE=password name=newpwd size="8"  maxlength="8"></TD>
+	<TD><input TYPE=password name=newpwd size="8"  maxlength="8"> max 8 digits</TD>
 </TR>
 <TR class=row_odd>
 	<TD><INPUT TYPE=submit name=submit value="Submit" class="form-button" >
@@ -51,6 +51,9 @@
 
 
 </FORM>
+<div style="margin: 20px;">
+	<A HREF="./Report.jsp">BACK</A>
+</div>
 </BODY>
 </HTML>
 

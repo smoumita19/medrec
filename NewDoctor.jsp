@@ -79,10 +79,10 @@ try
 	{
 		
 		%>
-			<H3 align="center">Details Updated Successfully </H3>
+			<H1 align="center">Details Updated Successfully!</H1>
 		<BR>
 		<center>
-			<A href="NewDoctor0.jsp"> Add another </A>
+			<A href="NewDoctor0.jsp" style="color: rgb(55 145 229);"> ADD ANOTHER DOCTOR </A>
 		</center>
 		<%
 	}

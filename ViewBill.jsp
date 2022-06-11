@@ -14,7 +14,7 @@
 </HEAD>
  <jsp:include page="MultiLevelmenu.htm"/><br><br>
 <BODY class=SC>
-<P align=right><a class=title onclick="javascipt:window.print()" onmouseover="this.style.cursor='hand'" ><img src="images/printer1.jpg" width="37" height="38" border=0 alt=""></a></P>
+<P align=right><a class=title onclick="printTable()" onmouseover="this.style.cursor='hand'" ><img src="images/printer1.jpg" width="37" height="38" border=0 alt=""></a></P>
 <h1 align=center>Bill Details</h1>
 
 <%

@@ -9,7 +9,7 @@
 	<script LANGUAGE="Javascript" SRC="images/calender.js"></script>
     <script language="Javascript" src="images/validate.js"></script>
 	<SCRIPT LANGUAGE="JavaScript">
-	<!--
+
 	function check(){
 		// var frm = document.forms(0);
 		var frm = document.forms[0];
@@ -32,12 +32,12 @@
 
 
 if(!(Dpattern.test(DoctorName))){
-	alert("Invalid DoctorName");
+	alert("Invalid Doctor Name");
     return false;
 	}
 else
 if(DateOfJoin==""){ 
-		alert("DateOfJoin is mandatory");
+		alert("Date Of Join is mandatory");
 		return false;
 		}
 else
@@ -58,26 +58,26 @@ if(!(wpattern.test(Experience))){
 	}
 else
 if(HolidayinWeekIndex==""){ 
-		alert("HolidayinWeek is mandatory");
+		alert("Holiday in Week is mandatory");
 		return false;
 		}
 
 else
 
 if((!(wpattern.test(WorkingHours))||WorkingHours>24||WorkingHours<=0)){
-	alert("Invalid WorkingHours");
+	alert("Invalid Working Hours");
     return false;
 	}
 else
 if(!(Apattern.test(ChargesPerHour))){
-	alert("Invalid ChargesPerHour");
+	alert("Invalid Charges Per Hour");
     return false;
 	}
 	
 	}
 	
     
-	//-->
+
 	</SCRIPT>
 
   </HEAD>
@@ -104,13 +104,13 @@ else{
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>DoctorName *</TD>
+	   <TD>Consultant Doctor Name *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="DoctorName" SIZE="20" ></td>
 	   </TR>
 
 	  	   
 	   <TR class=row_odd >
-	   <TD>DateOfJoin*</TD> <TD><input type="date" size=20 id="DateOfJoin" name="DateOfJoin">
+	   <TD>Date Of Join *</TD> <TD><input type="date" size=20 id="DateOfJoin" name="DateOfJoin">
 
 	   <!-- <input type="date" id="birthday" name="birthday"> -->
 	 <!-- <img onkeypress="fnCalendar(this)" id="imgDate" style="CURSOR: hand" onClick="fnCalendar(this)" height="16" src="images/CalDis.gif" width="16" border="0" name="imgDate" onMouseOver="fnEnableCalLookup(this)" onMouseOut="fnDisableCalLookup(this)" > -->
@@ -118,7 +118,7 @@ else{
          </TR>
 	   	  
 	   <TR class=row_even >
-	   <TD>Designation*</TD>
+	   <TD>Designation *</TD>
 	 <TD><select name="Designation">
 				<option value="---">---</option>
 				<option value="Anesthesiologist">Anesthesiologist</option>
@@ -142,20 +142,20 @@ else{
 	   </TR>
 
 	   <TR class=row_odd >
-	   <TD>PhoneNumber*</TD>
+	   <TD>Phone Number (0-10 Digits)*</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="PhoneNumber" SIZE="20" ></TD>
 	   </TR>
 	   
 	   <TR class=row_even >
-	   <TD>Experience*</TD>
-	   <TD><INPUT TYPE="TEXT" NAME="Experience" SIZE="20" ></TD>
+	   <TD>Experience *</TD>
+	   <TD><INPUT TYPE="TEXT" NAME="Experience" SIZE="20" > years</TD>
 	   </TR>
 
 	  
 	   
 
 	   <TR class=row_odd >
-	   <TD>HolidayinWeek *</TD>
+	   <TD>Holiday in Week *</TD>
 	    <TD><select name="HolidayinWeek">
 				<option value="---">---</option>	
 				<option value="Sunday">Sunday</option>	   
@@ -170,12 +170,12 @@ else{
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>WorkingHours *</TD>
+	   <TD>Working Hours (0-24) *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="WorkingHours" SIZE="20" ></TD>
 	   </TR>
 
 	   <TR class=row_odd >
-	   <TD>ChargesPerHour *</TD>
+	   <TD>Charges Per Hour *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="ChargesPerHour" SIZE="20" >in Rupees</TD>
 	   </TR>
    

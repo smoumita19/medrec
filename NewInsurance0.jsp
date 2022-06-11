@@ -149,39 +149,39 @@ else{
 	   </TR>
 	  
        <TR class=row_even >
-	   <TD>NameOfPatient*</TD>
+	   <TD>Name Of Patient *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="NameOfPatient" SIZE="20"  readonly><input type="button" value="Show InPatients" onclick="fnEmpPopUp('ShowInPatients.jsp',300,300)"></td>
 	   </TR>
 	
 	   <TR class=row_odd >
-	   <TD>NameOfApplicant *</TD>
+	   <TD>Name Of Applicant *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="NameOfApplicant" SIZE="20" ></td>
 	   </TR>
 
 	   <TR class=row_even >
-	   <TD>WorkingAtCompany *</TD>
+	   <TD>Working At Company *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="WorkingAtCompany" SIZE="20" ></TD>
 	   </TR>
 	   
 	   <TR class=row_odd >
-	   <TD>EmployeeID *</TD>
+	   <TD>Employee ID *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="EmployeeID" SIZE="5" ></TD>
 	   </TR>
 	  
 	   
 	   <TR class=row_even >
-	   <TD>RelationWithPatient*</TD>
+	   <TD>Relation With Patient *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="RelationWithPatient" SIZE="20" ></TD>
 	   </TR>
 
 
 	   <TR class=row_odd >
-	   <TD>Natureofillness*</TD>
+	   <TD>Nature of illness *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Natureofillness" SIZE="20" ></TD>
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>DateOfAdmission*</TD> <TD>
+	   <TD>Date Of Admission *</TD> <TD>
 		<input type="date" size=20 id="DateOfAdmission" name="DateOfAdmission">   
    
 		<!-- <input size=20 readonly id="DateOfAdmission" name="DateOfAdmission">
@@ -190,7 +190,7 @@ else{
          </TR>
 
 		<TR class=row_Odd >
-	   <TD>DateOfDischarge*</TD> <TD>
+	   <TD>Date Of Discharge *</TD> <TD>
 		<input type="date" size=20 id="DateOfDischarge" name="DateOfDischarge" onchange="calculateNoOfDays(this)">   
   
 		<!-- <input size=20 readonly id="DateOfDischarge" name="DateOfDischarge" >
@@ -204,26 +204,26 @@ else{
 	   </TR>
 	   
 	   <TR class=row_odd >
-	   <TD>AmountClaimed*</TD>
+	   <TD>Amount Claimed *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="AmountClaimed" SIZE="20"></TD>
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>Place*</TD>
+	   <TD>Place *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Place" SIZE="20"  ></TD>
 	   </TR>
 
 	   <TR class=row_odd >
-	   <TD>PolicyNumber*</TD>
+	   <TD>Policy Number *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="PolicyNumber" SIZE="20"></TD>
 	   </TR>
 
 	   <TR class=row_even >
-	   <TD>Claim Number*</TD>
+	   <TD>Claim Number *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="ClaimNumber" SIZE="20"  ></TD>
 	   </TR>
 
-		<TR class=row_even ALIGN="CENTER">
+		<TR class=row_odd ALIGN="CENTER">
 			<TD><INPUT TYPE="SUBMIT" VALUE="Submit" class="form-button"></TD>
 			<TD><INPUT TYPE="RESET" VALUE="Reset" class="form-button"></TD>
 		</TR>

@@ -89,10 +89,10 @@ try
 
 			</jsp:forward>
 
-			<H3 align="center">Details Updated Successfully </H3>
+			<H1 align="center">Details Updated Successfully! </H1>
 		<BR>
 		<center>
-			<A href="NewDischarges0.jsp"> Discharge another </A><br>
+			<A href="NewDischarges0.jsp" style="color: rgb(55 145 229);"> DISCHARGE ANOTHER PATIENT </A><br>
 			
 		</center>
 		<%

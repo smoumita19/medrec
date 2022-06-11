@@ -23,7 +23,7 @@ history.go(+1);
 <jsp:include page="MultiLevelmenu.htm"/><br><br><br>
 
 <body class="SC">
-<P align=right><a class=title onclick="javascipt:window.print()" onmouseover="this.style.cursor='hand'" ><img src="images/printer1.jpg" width="37" height="38" border=0 alt=""></a></P>
+<P align=right><a class=title onclick="printTable()" onmouseover="this.style.cursor='hand'" ><img src="images/printer1.jpg" width="37" height="38" border=0 alt=""></a></P>
 <h2 align=Center> InPatients Between <%=strStartDate%>and <%=strEndDate%></h2>
 <form name=cons>
 <table width="20%" align=Left>

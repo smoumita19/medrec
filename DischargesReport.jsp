@@ -36,9 +36,10 @@ Statement stmt=null;
 ResultSet rs=null;
    
 String orderby="NameOfPatient";
-String NameOfPatient="",Natureofillness="",ConsultantDoctor="";
-int PatientID;
+String NameOfPatient,Sex,Occupation,Natureofillness;
+String ConsultantDoctor,ReferedByDoctor,Insurance;
 Date DateOfAdmission,DateOfDischarge;
+int RoomID,PatientID,Age,TotalCharge;
 float BillAmount;
 System.out.println("--1---");
 orderby=((String)request.getParameter("orderby")==null) ? "NameOfPatient":(String)request.getParameter("orderby");
@@ -54,7 +55,9 @@ try
 
 	con=(Connection)session.getAttribute("connection");
 	stmt =  con.createStatement();
-	String Query = "SELECT * FROM DischargesMaster where (DateOfDischarge between (\'"+strStartDate+"\') and (\'"+strEndDate+"\'))";
+	/*String Query = "SELECT * FROM DischargesMaster where (DateOfDischarge between (\'"+strStartDate+"\') and (\'"+strEndDate+"\'))";*/
+	String Query = "SELECT d.NameOfPatient, d.PatientID, d.Age, d.Sex, d.Occupation, d.Natureofillness, d.DateOfAdmission, d.DateOfDischarge, d.ReferedByDoctor, d.Insurance, b.TotalCharge FROM `dischargesmaster` d INNER JOIN billingmaster b ON d.PatientID = b.PatientID where d.DateOfDischarge between (\'"+strStartDate+"\') and (\'"+strEndDate+"\')";
+
 
 	System.out.println("--1--"+Query);
 	rs = stmt.executeQuery(Query);
@@ -82,14 +85,19 @@ if(rs!=null)
 
 	<table width="100%" align=right class="printTable" id="printTable" border="1" cellpadding="1">
 
-	<tr class=row_title>
-	<th class=row_title><a class=title href="DischargesReport.jsp?orderby=NameOfPatient">NameOfPatient</a></th>
-	<th class=row_title><a class=title href="DischargesReport.jsp?orderby=PatientID">PatientID</a></th>
-	<th class=row_title><a class=title href="DischargesReport.jsp?orderby=Natureofillness">Nature of illness</a></th>
-	<th class=row_title><a class=title href="DischargesReport.jsp?orderby=DateOfAdmission">Date Of Admission</a></th>
-	<th class=row_title><a class=title href="DischargesReport.jsp?orderby=DateOfDischarge">Date Of Discharge</a></th>
-	<th class=row_title><a class=title href="DischargesReport.jsp?orderby=ConsultantDoctor">Consultant Doctor</a></th>
-	<th class=row_title><a class=title href="DischargesReport.jsp?orderby=BillAmount">Bill Amount </a></th>
+		<tr class=row_title>
+		<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=NameOfPatient">Name Of Patient</a></th>
+		<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=PatientID">Patient ID</a></th>
+		<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Age">Age</a></th>
+		<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Sex">Sex</a></th>
+		<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Occupation">Occupation</a></th>
+		<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Natureofillness">Nature of illness</a></th>
+		<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=DateOfAdmission">Date Of Admission</a></th>
+		<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=DateOfDischarge">Date Of Discharge</a></th>
+		<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=ConsultantDoctor">Consultant Doctor</a></th>
+		<!-- <th class=row_title><a class=title href="ViewDischarges.jsp?orderby=ReferedByDoctor">Refered By Doctor</a></th> -->
+		<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Insurance">Insurance</a></th>
+		<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=BillAmount">Bill Amount</a></th>
 
 <%
 
@@ -98,23 +106,32 @@ int DisRow=0;
 
 	while(rs.next())
 	{
- 	  NameOfPatient=rs.getString(1);
-	  PatientID=rs.getInt(2);
-	  Natureofillness=rs.getString(6);
-	  DateOfAdmission=rs.getDate(7);
-	  DateOfDischarge=rs.getDate(8);   
- 	  ConsultantDoctor=rs.getString(11); 
-	  BillAmount=rs.getFloat(13);
+		NameOfPatient=rs.getString(1);
+		PatientID=rs.getInt(2);
+		Age=rs.getInt(3);
+		Sex=rs.getString(4);
+		Occupation=rs.getString(5);
+		Natureofillness=rs.getString(6);
+		DateOfAdmission=rs.getDate(7);
+		DateOfDischarge=rs.getDate(8);
+		ReferedByDoctor=rs.getString(9);
+		Insurance=rs.getString(10);
+		TotalCharge=rs.getInt(11);
 	DisRow++;
 	%>
 	<tr class= <%=(DisRow%2!=0)? "row_even" : "row_odd"%>>
-		<td align=center><%= NameOfPatient%></td>
-		<td align=center><%= PatientID%></td>
-		<td align=center><%= Natureofillness%></td>
-		<td align=center><%= DateOfAdmission%></td>
-		<td align=center><%= DateOfDischarge%></td>
-		<td align=center><%= ConsultantDoctor%></td>
-		<td align=center><%= BillAmount%></td>
+		<td align=center class="tblData"><%= NameOfPatient%></td>
+		<td align=center class="tblData"><%= PatientID%></td>
+		<td align=center class="tblData"><%= Age%></td>
+		<td align=center class="tblData"><%= Sex%></td>
+		<td align=center class="tblData"><%= Occupation%></td>
+		<td align=center class="tblData"><%= Natureofillness%></td>
+		<td align=center class="tblData"><%= DateOfAdmission%></td>
+		<td align=center class="tblData"><%= DateOfDischarge%></td>
+
+		<td align=center class="tblData"><%= ReferedByDoctor%></td>
+		<td align=center class="tblData"><%= Insurance%></td>
+		<td align=center class="tblData"><%= TotalCharge%></td>
 	<%
 	}
 

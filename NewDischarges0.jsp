@@ -129,13 +129,13 @@ else{
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>NameOfPatient *</TD>
+	   <TD>Name Of Patient *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="NameOfPatient" SIZE="10"  readonly><input type="button" value="Show InPatients" onclick="fnEmpPopUp('ShowPatients.jsp',300,300)"></td>
 
 	   </TR>
 
 	   <TR class=row_odd >
-	   <TD>PatientID *</TD>
+	   <TD>Patient ID *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="PatientID" SIZE="20" readonly></TD>
 	   </TR>
 	   
@@ -145,13 +145,13 @@ else{
 	   </TR>
 	  
 	   <TR class=row_odd >
-	   <TD>Sex* </TD>
+	   <TD>Sex *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Sex" SIZE="10" readonly ></TD>
 	   </TR>
 
 	  
 	   <TR class=row_even >
-	   <TD>Occupation*</TD>
+	   <TD>Occupation *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Occupation" SIZE="10" readonly ></TD>
  	   </TR>
 
@@ -163,13 +163,13 @@ else{
 
 	  
 	   <TR class=row_even >
-	   <TD>DateOfAdmission*</TD> <TD><input type="date" size=20 readonly id="DateOfAdmission" name="DateOfAdmission">
+	   <TD>Date Of Admission*</TD> <TD><input type="date" size=20 readonly id="DateOfAdmission" name="DateOfAdmission">
 	 
    	  </TD>
          </TR>
 
 	   <TR class=row_odd >
-	   <TD>DateOfDischarge *</TD>
+	   <TD>Date Of Discharge *</TD>
 	   <TD>
 		<input type="date" size=20 id="DateOfDischarge"  name="DateOfDischarge" onchange="diffInDates(this)">   
 
@@ -181,12 +181,12 @@ else{
 
 		   
 		<TR class=row_even >
-		  <TD>PeriodofStayinHospital*</TD>
+		  <TD>Period of Stay in Hospital *</TD>
 		  <TD><INPUT TYPE="TEXT" NAME="PeriodofStayinHospital" ID="PeriodofStayinHospital" SIZE="20" readonly></TD>
 		</TR>
 	  
 	   <TR class=row_even >
-	   <TD>RoomID*</TD>
+	   <TD>Room ID *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="RoomID" SIZE="20" readonly ></TD>
 	   </TR>
 
@@ -196,17 +196,17 @@ else{
 	   </TR> -->
 
 	   <TR class=row_even >
-	   <TD>ConsultantDoctor *</TD>
+	   <TD>Consultant Doctor *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="ReferedByDoctor" SIZE="20" readonly></TD>
 	   </TR>
 
 	   <TR class=row_even >
-		<TD>Doctor ID*</TD>
+		<TD>Doctor ID *</TD>
 		<TD><INPUT TYPE="TEXT" NAME="DoctorID" SIZE="20" readonly></TD>
 		</TR>
 
 		<TR class=row_odd style="display: none;" >
-			<TD>Insurance*</TD>
+			<TD>Insurance *</TD>
 			<TD><INPUT TYPE="HIDDEN" NAME="Insurance" SIZE="10" readonly></TD>
 		</TR>
 	

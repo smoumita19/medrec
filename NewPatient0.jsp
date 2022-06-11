@@ -149,7 +149,7 @@ else{
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>NameOfPatient *</TD>
+	   <TD>Name Of Patient *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="NameOfPatient" SIZE="20" ></td>
 	   </TR>
 
@@ -160,7 +160,7 @@ else{
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>Sex* </TD>
+	   <TD>Sex *</TD>
 	    <TD><select name="Sex">
 				<option value="---">---</option>	
 				<option value="Male">Male</option>	   
@@ -171,7 +171,7 @@ else{
 
 	  
 	   <TR class=row_odd >
-	   <TD>Occupation*</TD>
+	   <TD>Occupation *</TD>
 	 <TD><select name="Occupation">
 				<option value="---">---</option>	
 				<option value="Working">Working</option>	   
@@ -181,7 +181,7 @@ else{
 	   </TR>
 
 	   <TR class=row_even >
-	   <TD>ContactNumber*</TD>
+	   <TD>Contact Number *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="ContactNumbers" SIZE="20" ></TD>
 	   </TR>
 	   
@@ -192,7 +192,7 @@ else{
 
 	  
 	   <TR class=row_even >
-	   <TD>DateOfAdmission*</TD> <TD>
+	   <TD>Date Of Admission*</TD> <TD>
 		<input type="date" size=20 id="DateOfAdmission" name="DateOfAdmission">
 		<!-- <input size=20 readonly id="DateOfAdmission" name="DateOfAdmission">
 	 <img onkeypress="fnCalendar(this)" id="imgDate" style="CURSOR: hand" onClick="fnCalendar(this)" height="16" src="images/CalDis.gif" width="16" border="0" name="imgDate" onMouseOver="fnEnableCalLookup(this)" onMouseOut="fnDisableCalLookup(this)" > -->
@@ -211,7 +211,7 @@ else{
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>Insurance*</TD>
+	   <TD>Insurance *</TD>
 	   <TD><select name="Insurance" onchange="var x=document.AdmissionForm.AdmissionAs.value; if(x=='OutPatient' && this.value=='Yes'){alert('Insurance cannot be claimed for out patients');this.value='No';}">
 				<option value="---">---</option>	
 				<option value="Yes">Yes</option>	   
@@ -229,21 +229,21 @@ else{
 	   <TD><INPUT TYPE="TEXT" NAME="RelationWithPatient" SIZE="20"  ></TD>
 	   </TR>
 	   <TR class=row_odd >
-	   <TD>ReferedByDoctor*</TD>
+	   <TD>Refered By Doctor *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="ReferedByDoctor" SIZE="10"  readonly><input type="button" value="Show Doctors" onclick="fnEmpPopUp('ListAvailableDoctors.jsp',300,300)"></td>
 	   </TR>
 	   <TR class=row_odd style="display: none;">
-		<TD>DoctorId*</TD>
+		<TD>Doctor Id *</TD>
 		<TD><INPUT TYPE="TEXT" NAME="DoctorID" SIZE="10"  readonly></td>
 		</TR>
 
 	  
 	   <TR class=row_even >
-	   <TD>RoomID*</TD>
+	   <TD>RoomID *</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="RoomID" SIZE="20"></TD>
 	   </TR>
 
-		<TR class=row_even ALIGN="CENTER">
+		<TR class=row_odd ALIGN="CENTER">
 			<TD><INPUT TYPE="SUBMIT" VALUE="Add" class="form-button"></TD>
 			<TD><INPUT TYPE="RESET" VALUE="Reset" class="form-button"></TD>
 		</TR>

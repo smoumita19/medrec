@@ -47,7 +47,7 @@ String orderby="NameOfPatient";
 String NameOfPatient,Sex,Occupation,Natureofillness;
 String ConsultantDoctor,ReferedByDoctor,Insurance;
 Date DateOfAdmission,DateOfDischarge;
-int RoomID,PatientID,Age;
+int RoomID,PatientID,Age,TotalCharge;
 float BillAmount;
 System.out.println("--1---");
 orderby=((String)request.getParameter("orderby")==null) ? "NameOfPatient":(String)request.getParameter("orderby");
@@ -61,7 +61,7 @@ try
 	con=(Connection)session.getAttribute("connection");
 	stmt =  con.createStatement();
 	/*String Query = "SELECT * FROM DischargesMaster order by "+orderby;*/
-	String Query = "SELECT d.NameOfPatient, d.Age, d.Sex, d.Occupation, d.Natureofillness, d.DateOfAdmission, d.DatefDischarge, d.ReferedByDoctor, d.Insurance, b.TotalCharge FROM `dischargesmaster` d INNER JOIN billingmaster b ON d.PatientID = b.PatientID";
+	String Query = "SELECT d.NameOfPatient, d.PatientID, d.Age, d.Sex, d.Occupation, d.Natureofillness, d.DateOfAdmission, d.DateOfDischarge, d.ReferedByDoctor, d.Insurance, b.TotalCharge FROM `dischargesmaster` d INNER JOIN billingmaster b ON d.PatientID = b.PatientID";
 
 	System.out.println("--1--"+Query);
 	rs = stmt.executeQuery(Query);
@@ -90,15 +90,14 @@ if(rs!=null)
 	<table width="100%" align=right class="printTable" id="printTable" border="1" cellpadding="1">
 
 	<tr class=row_title>
-        <th class=row_title><a class=title href="ViewDischarges.jsp?orderby=NameOfPatient">Name Of Patient</a></th>
+    <th class=row_title><a class=title href="ViewDischarges.jsp?orderby=NameOfPatient">Name Of Patient</a></th>
 	<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=PatientID">Patient ID</a></th>
-        <th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Age">Age</a></th>
-        <th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Sex">Sex</a></th>
+    <th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Age">Age</a></th>
+    <th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Sex">Sex</a></th>
 	<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Occupation">Occupation</a></th>
 	<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Natureofillness">Nature of illness</a></th>
 	<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=DateOfAdmission">Date Of Admission</a></th>
 	<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=DateOfDischarge">Date Of Discharge</a></th>
-	<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Insurance">Room ID</a></th>
 	<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=ConsultantDoctor">Consultant Doctor</a></th>
 	<!-- <th class=row_title><a class=title href="ViewDischarges.jsp?orderby=ReferedByDoctor">Refered By Doctor</a></th> -->
 	<th class=row_title><a class=title href="ViewDischarges.jsp?orderby=Insurance">Insurance</a></th>
@@ -118,11 +117,9 @@ int DisRow=0;
 	  Natureofillness=rs.getString(6);
 	  DateOfAdmission=rs.getDate(7);
 	  DateOfDischarge=rs.getDate(8);
-	  RoomID=rs.getInt(9);
- 	  ConsultantDoctor=rs.getString(10);
-	  ReferedByDoctor=rs.getString(11);
-	  Insurance=rs.getString(12);
-   	  BillAmount=rs.getFloat(13);
+	  ReferedByDoctor=rs.getString(9);
+	  Insurance=rs.getString(10);
+	  TotalCharge=rs.getInt(11);
 	DisRow++;
 	%>
 	<tr class= <%=(DisRow%2!=0)? "row_even" : "row_odd"%>>
@@ -134,11 +131,10 @@ int DisRow=0;
 		<td align=center class="tblData"><%= Natureofillness%></td>
 		<td align=center class="tblData"><%= DateOfAdmission%></td>
 		<td align=center class="tblData"><%= DateOfDischarge%></td>
-		<td align=center class="tblData"><%= RoomID%></td>
-		<!-- <td align=center class="tblData"><%= ConsultantDoctor%></td> -->
+
 		<td align=center class="tblData"><%= ReferedByDoctor%></td>
 		<td align=center class="tblData"><%= Insurance%></td>
-		<td align=center class="tblData"><%= BillAmount%></td>
+		<td align=center class="tblData"><%= TotalCharge%></td>
 	<%
 	}
 

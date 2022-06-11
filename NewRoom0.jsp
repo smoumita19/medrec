@@ -120,7 +120,7 @@ else{
 	   
 	   <!-- <TR class=row_even > -->
 		<TR class=row_odd >
-	   <TD>VisitorsAllowed*</TD>
+	   <TD>Visitors Allowed *</TD>
 	   <TD><select name="VisitorsAllowed">
 				<option value="---">---</option>
 				<option value="1Member">1Member</option>
@@ -133,11 +133,11 @@ else{
 
 	   <!-- <TR class=row_odd > -->
 	   <TR class=row_even >
-	   <TD>VisitingPeriod*</TD>
+	   <TD>Visiting Period*</TD>
 	   <TD><INPUT TYPE="TEXT" NAME="VisitingHours" SIZE="20" >in Hours</TD>
 	   </TR>
 
-		<TR class=row_even ALIGN="CENTER">
+		<TR class=row_odd ALIGN="CENTER">
 			<TD><INPUT TYPE="SUBMIT" VALUE="Submit" class="form-button"></TD>
 			<TD><INPUT TYPE="RESET" VALUE="Reset" class="form-button"></TD>
 		</TR>

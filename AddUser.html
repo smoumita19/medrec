@@ -61,18 +61,22 @@ function validate(){
 </TR>
 
 <TR class=row_even>
-	<TD>Userid * </TD>
-	<TD><input TYPE=text name=uid size="8" maxlength="8"></TD>
+	<TD>User Id * </TD>
+	<TD><input TYPE=text name=uid size="8" maxlength="8"> max 8 digits</TD>
+
 </TR>
 <TR class=row_odd>
 	<TD>Password * </TD>
-	<TD><input TYPE=password name=pwd size="8"  maxlength="8"></TD>
+	<TD><input TYPE=password name=pwd size="8"  maxlength="8"> max 8 digits</TD>
 </TR>
 <TR class=row_even>
 	<TD>Authentication * </TD>
-	<TD><input TYPE=text name=auth size="1"  maxlength="1"></td> <td>(0-Admin,1-Doctor,2-Manager,3-Accountant)</TD>
+	<TD><input TYPE=text name=auth size="8"  maxlength="1"></td>
 </TR>
 <TR class=row_odd>
+	<td COLSPAN="2">(0-Admin,1-Doctor,2-Manager,3-Accountant)</TD>
+</TR>
+<TR class=row_even>
 	<TD><INPUT TYPE=submit name=submit value="Submit" class="form-button" >
 </TD>
 	<TD><INPUT TYPE=reset name=resett value="Reset" class="form-button" > 
@@ -82,6 +86,10 @@ function validate(){
 
 
 </FORM>
+
+<div style="margin: 20px;">
+	<A HREF="./Report.jsp">BACK</A>
+</div>
 </BODY>
 </HTML>
 
