@@ -9,7 +9,7 @@
 	<script LANGUAGE="Javascript" SRC="images/calender.js"></script>
     <script language="Javascript" src="images/validate.js"></script>
 	<SCRIPT LANGUAGE="JavaScript">
-	<!--
+	
 	function check(){
 		var DoctorName = document.AppointmentForm.DoctorName.value;
 		var DoctorID =document.AppointmentForm.DoctorID.value;
@@ -23,53 +23,54 @@
 		var NoOfHours = document.AppointmentForm.NoOfHours.value;
 		var Cost = document.AppointmentForm.Cost.value;
 
-	var pattern = /^([a-zA-Z0-9\_\. ]{1,15})$/;
-	var wpattern = /^([0-9]{1,2})$/;
-	var ADpattern = /^([a-zA-Z0-9\_\. ]{4,20})$/;
-	var Npattern = /^([a-zA-Z\_\. ]{1,15})$/;
-	var Ipattern = /^([a-zA-Z\_\. ]{1,25})$/;
-	var Apattern = /^([0-9]{1,10})$/;
+		var pattern = /^([a-zA-Z0-9\_\. ]{1,15})$/;
+		var wpattern = /^([0-9]{1,2})$/;
+		var ADpattern = /^([a-zA-Z0-9\_\. ]{4,20})$/;
+		var Npattern = /^([a-zA-Z\_\. ]{1,15})$/;
+		var Ipattern = /^([a-zA-Z\_\. ]{1,25})$/;
+		var Apattern = /^([0-9]{1,10})$/;
 
 
-if(DoctorName==""){
-	alert("DoctorName field is manadatory");
-    return false;
-	}
-else
-if(DoctorID==""){
-	alert("DoctorID field is manadatory");
-    return false;
-	}
-else
-if(Designation==""){
-	alert("Designation field is manadatory");
-    return false;
-	}
-else
-if(AppointmentGiventoIndex==""){
-	alert("Appointment Given to field is manadatory");
-    return false;
-	}
-else
-if(PatientID==""){
-	alert("PatientID field is manadatory");
-    return false;
-	}
-else
-if(NameOfCharity==""){
-	alert("NameOfCharity field is manadatory");
-    return false;
-	}
-else
-if(DateOfAppointment==""){
-	alert("DateOfAppointment field is manadatory");
-    return false;
-	}
-else
-if(!(wpattern.test(NoOfHours))){
-	alert("Invalid NoOfHours");
-    return false;
-	}
+		if(DoctorName==""){
+			alert("DoctorName field is manadatory");
+			return false;
+			}
+		else
+		if(DoctorID==""){
+			alert("DoctorID field is manadatory");
+			return false;
+			}
+		else
+		if(Designation==""){
+			alert("Designation field is manadatory");
+			return false;
+			}
+		else
+		if(AppointmentGiventoIndex==""){
+			alert("Appointment Given to field is manadatory");
+			return false;
+			}
+		else
+		if(PatientID==""){
+			alert("PatientID field is manadatory");
+			return false;
+			}
+		else
+		if(NameOfCharity==""){
+			alert("NameOfCharity field is manadatory");
+			return false;
+			}
+		else
+		if(DateOfAppointment==""){
+			alert("DateOfAppointment field is manadatory");
+			return false;
+			}
+		else
+		
+		if(!(wpattern.test(NoOfHours))||NoOfHours>24||NoOfHours<=0){
+			alert("Invalid NoOfHours");
+			return false;
+			}
 
 
 	}
@@ -111,7 +112,7 @@ if(!(wpattern.test(NoOfHours))){
 
 
 	}
-	//-->
+
 	</SCRIPT>
 
   </HEAD>
@@ -136,29 +137,29 @@ else{
 
 	  
 	   <TR class=row_even >
-	   <TD>Consultant Doctor Name *</TD>
+	   <TD>Consultant Doctor Name  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="DoctorName" SIZE="20"  readonly><input type="button" value="Show Doctors" onclick="fnEmpPopUp('ShowDoctors.jsp',300,300)"></td>
 	   </TR>
 
 	   <TR class=row_odd >
-	   <TD>Doctor ID *</TD>
+	   <TD>Doctor ID  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="DoctorID" SIZE="20" ></TD>
 	   </TR>
 
 	   <TR class=row_even >
-		<TD>Doctor Rate *</TD>
+		<TD>Doctor Rate  <FONT COLOR="red">*</FONT></TD>
 		<TD><INPUT TYPE="TEXT" NAME="DoctorRate" SIZE="20" ID="DoctorRate" ></TD>
 		</TR>
 	   
 	   	  
 	   <TR class=row_odd >
-	   <TD>Designation *</TD>
+	   <TD>Designation  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Designation" SIZE="20" ></TD>
 	   </TR>
 
 
 	   <TR class=row_even >
-	   <TD>Appointment Given to *</TD>
+	   <TD>Appointment Given to  <FONT COLOR="red">*</FONT></TD>
 	    <TD><select name="AppointmentGivento" onchange="MapAppointment()">
 				<option value="---">---</option>	
 				<option value="Patient">Patient</option>	   
@@ -168,23 +169,23 @@ else{
 	   </TR>
 	  
 	   <TR class=row_odd >
-	   <TD>PatientID *</TD>
+	   <TD>PatientID  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="PatientID" SIZE="20" readonly><input type="button" value="Show InPatients" Name="InpBtn" ID="InpBtn" onclick="fnEmpPopUp('ListPatients.jsp',300,300)"></td>
 
 	   </TR>
 	
 		<TR class=row_even >
-	   <TD>Name Of Patient *</TD>
+	   <TD>Name Of Patient  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="NameOfPatient" SIZE="20" Value=""></TD>
 	   </TR>
 
 	   <TR class=row_odd >
-	   <TD>Name Of Charity *</TD>
+	   <TD>Name Of Charity  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="NameOfCharity" SIZE="20" Value=""></TD>
 	   </TR>
 	
 	 	<TR class=row_even >
-	   <TD>Date Of Appointment*</TD> <TD>
+	   <TD>Date Of Appointment <FONT COLOR="red">*</FONT></TD> <TD>
 		<input type="date" size=20 id="DateOfAppointment" name="DateOfAppointment">   
 		<!-- <input size=20 readonly id="DateOfAppointment" name="DateOfAppointment">
 	 <img onkeypress="fnCalendar(this)" id="imgDate" style="CURSOR: hand" onClick="fnCalendar(this)" height="16" src="images/CalDis.gif" width="16" border="0" name="imgDate" onMouseOver="fnEnableCalLookup(this)" onMouseOut="fnDisableCalLookup(this)" > -->
@@ -193,13 +194,13 @@ else{
 	  
 
 	   <TR class=row_odd >
-	   <TD>No Of Hours *</TD>
+	   <TD>No Of Hours (0-24) <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="NoOfHours" SIZE="20" ID="NoOfHours" onchange="calculateCost(this)"></TD>
 	   </TR>
 
 	   
 	   <TR class=row_even >
-		<TD>Cost *</TD>
+		<TD>Cost  <FONT COLOR="red">*</FONT></TD>
 		<TD><INPUT TYPE="TEXT" NAME="Cost" ID="Cost" SIZE="20" ></TD>
 		</TR>
    

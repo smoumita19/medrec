@@ -12,7 +12,7 @@
 	<!--
 	function check(){
 		
-		var RoomID = document.NewRoomForm.RoomID.value;
+		//var RoomID = document.NewRoomForm.RoomID.value;
 		var CategoryIndex=document.NewRoomForm.Category.options.selectedIndex;
 		var Category = document.NewRoomForm.Category.options[CategoryIndex].value;
 		// var NoOfBeds =document.NewRoomForm.NoOfBeds.value;
@@ -29,11 +29,11 @@
 	var Apattern = /^([0-9]{1,10})$/;
 
 
-if(RoomID==""){
-	alert("Invalid RoomID");
-    return false;
-	}
-else
+// if(RoomID==""){
+// 	alert("Invalid RoomID");
+//     return false;
+// 	}
+// else
 if(CategoryIndex=="")
 		{
 		alert("Category field is mandatory");
@@ -57,7 +57,7 @@ else
 		return false;
 		}
 	else
-if((!(wpattern.test(VisitingHours)))||(VisitingHours>5)){
+if((!(wpattern.test(VisitingHours)))||(VisitingHours < 10) || (VisitingHours > 14)){
 	alert("Invalid VisitingHours");
     return false;
 	}
@@ -88,14 +88,14 @@ else{
 	   <TR class=row_title  ALIGN="center">
 	   <TH COLSPAN="2"> New Room Form </TH>
 	   </TR>
-	  
+<!-- 	  
 	   <TR class=row_even >
-	   <TD>RoomID *</TD>
+	   <TD>RoomID  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="RoomID" SIZE="20" ></td>
-	   </TR>
+	   </TR> -->
 
 	   <TR class=row_odd >
-	   <TD>Category *</TD>
+	   <TD>Category  <FONT COLOR="red">*</FONT></TD>
 	   <TD><select name="Category">
 				<option value="---">---</option>
 				<option value="General">General</option>
@@ -108,19 +108,19 @@ else{
 	   </TR>
 	   
 	   <!-- <TR class=row_even >
-	   <TD>No Of Beds *</TD>
+	   <TD>No Of Beds  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="NoOfBeds" SIZE="5" ></TD>
 	   </TR> -->
 	  
 	   <!-- <TR class=row_odd > -->
 		<TR class=row_even >
-	   <TD>Charges Per Day*</TD>
+	   <TD>Charges Per Day <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="ChargesPerDay" SIZE="20" ></TD>
 	   </TR>
 	   
 	   <!-- <TR class=row_even > -->
 		<TR class=row_odd >
-	   <TD>Visitors Allowed *</TD>
+	   <TD>Visitors Allowed  <FONT COLOR="red">*</FONT></TD>
 	   <TD><select name="VisitorsAllowed">
 				<option value="---">---</option>
 				<option value="1Member">1Member</option>
@@ -133,8 +133,8 @@ else{
 
 	   <!-- <TR class=row_odd > -->
 	   <TR class=row_even >
-	   <TD>Visiting Period*</TD>
-	   <TD><INPUT TYPE="TEXT" NAME="VisitingHours" SIZE="20" >in Hours</TD>
+	   <TD>Visiting Period (Between 10 to 14) <FONT COLOR="red">*</FONT></TD>
+	   <TD><INPUT TYPE="TEXT" NAME="VisitingHours" SIZE="20" > hours</TD>
 	   </TR>
 
 		<TR class=row_odd ALIGN="CENTER">

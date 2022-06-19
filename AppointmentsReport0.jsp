@@ -62,7 +62,7 @@ onsubmit="return Validate();">
 	   <TH COLSPAN="2"> Appointments Report </TH>
 	   </TR>
 <TR class="row_even">
-<Td><B>Start Date</B></Td>
+<Td><B>Start Date</B> <FONT COLOR="red">*</FONT></Td>
 <TD>
 	<input type="date" size=20 id="Start" name="Start">   
 
@@ -70,19 +70,19 @@ onsubmit="return Validate();">
 </TD>
 </TR>
 <TR class="row_odd">
-<Td><B>End Date</B></Td>
+<Td><B>End Date</B> <FONT COLOR="red">*</FONT></Td>
 <TD>
 	<input type="date" size=20 id="End" name="End">   
 
 <!-- <input type=text name="End" size=15 readonly><img onkeypress="fnCalendar(this)" id="imgDate" style="CURSOR: hand" onClick="fnCalendar(this)" height="16" src="images/CalDis.gif" width="16" border="0" name="imgDate" onMouseOver="fnEnableCalLookup(this)" onMouseOut="fnDisableCalLookup(this)" > -->
 </TD>
 <TR class="row_even">
-<Td><B>Doctor Name</B><FONT COLOR="red">*</FONT></Td>
+<Td><B>Doctor Name</B> <FONT COLOR="red">*</FONT></Td>
 <td><input type="text" name="DoctorName" size=5 readonly><input type="button" value="List Doctors" onclick="fnEmpPopUp('ListDoctors.jsp',300,300)"></td>
 
 <TR class="row_odd" >
-<TD align=center><INPUT TYPE="submit" id=SUB Value="Get Report" ></TD>
-<TD align=center><INPUT id='RES' TYPE="RESET" ></TD>
+<TD align=center><INPUT TYPE="submit" id=SUB class="form-button" Value="Get Report" ></TD>
+<TD align=center><INPUT id='RES' TYPE="RESET" class="form-button" ></TD>
 </TR>
 </TABLE>
 </form>

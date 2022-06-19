@@ -149,18 +149,18 @@ else{
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>Name Of Patient *</TD>
+	   <TD>Name Of Patient  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="NameOfPatient" SIZE="20" ></td>
 	   </TR>
 
 	     
 	   <TR class=row_odd >
-	   <TD>Age *</TD>
-	   <TD><INPUT TYPE="TEXT" NAME="Age" SIZE="10" ></TD>
+	   <TD>Age  <FONT COLOR="red">*</FONT></TD>
+	   <TD><INPUT TYPE="TEXT" NAME="Age" SIZE="10" > years</TD>
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>Sex *</TD>
+	   <TD>Sex  <FONT COLOR="red">*</FONT></TD>
 	    <TD><select name="Sex">
 				<option value="---">---</option>	
 				<option value="Male">Male</option>	   
@@ -171,7 +171,7 @@ else{
 
 	  
 	   <TR class=row_odd >
-	   <TD>Occupation *</TD>
+	   <TD>Occupation  <FONT COLOR="red">*</FONT></TD>
 	 <TD><select name="Occupation">
 				<option value="---">---</option>	
 				<option value="Working">Working</option>	   
@@ -181,18 +181,18 @@ else{
 	   </TR>
 
 	   <TR class=row_even >
-	   <TD>Contact Number *</TD>
+	   <TD>Contact Number (0-10 Digits) <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="ContactNumbers" SIZE="20" ></TD>
 	   </TR>
 	   
 	   <TR class=row_odd >
-	   <TD>Nature of illness*</TD>
+	   <TD>Nature of illness <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Natureofillness" SIZE="20" ></TD>
 	   </TR>
 
 	  
 	   <TR class=row_even >
-	   <TD>Date Of Admission*</TD> <TD>
+	   <TD>Date Of Admission <FONT COLOR="red">*</FONT></TD> <TD>
 		<input type="date" size=20 id="DateOfAdmission" name="DateOfAdmission">
 		<!-- <input size=20 readonly id="DateOfAdmission" name="DateOfAdmission">
 	 <img onkeypress="fnCalendar(this)" id="imgDate" style="CURSOR: hand" onClick="fnCalendar(this)" height="16" src="images/CalDis.gif" width="16" border="0" name="imgDate" onMouseOver="fnEnableCalLookup(this)" onMouseOut="fnDisableCalLookup(this)" > -->
@@ -200,7 +200,7 @@ else{
          </TR>
 
 	   <TR class=row_odd >
-	   <TD>AdmissionAs *</TD>
+	   <TD>AdmissionAs  <FONT COLOR="red">*</FONT></TD>
 		   <TD><select name="AdmissionAs" onchange="fnCheckAdmissionAs(this)">
 
 				<option value="---">---</option>	
@@ -211,7 +211,7 @@ else{
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>Insurance *</TD>
+	   <TD>Insurance  <FONT COLOR="red">*</FONT></TD>
 	   <TD><select name="Insurance" onchange="var x=document.AdmissionForm.AdmissionAs.value; if(x=='OutPatient' && this.value=='Yes'){alert('Insurance cannot be claimed for out patients');this.value='No';}">
 				<option value="---">---</option>	
 				<option value="Yes">Yes</option>	   
@@ -221,25 +221,25 @@ else{
 	   </TR>
 
  	   <TR class=row_odd >
-	   <TD>GaurdianName *</TD>
+	   <TD>GaurdianName  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="GaurdianName" SIZE="20" ></TD>
 	   </TR>
 	   <TR class=row_even >
-	   <TD>Relation With Patient *</TD>
+	   <TD>Relation With Patient  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="RelationWithPatient" SIZE="20"  ></TD>
 	   </TR>
 	   <TR class=row_odd >
-	   <TD>Refered By Doctor *</TD>
+	   <TD>Refered By Doctor  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="ReferedByDoctor" SIZE="10"  readonly><input type="button" value="Show Doctors" onclick="fnEmpPopUp('ListAvailableDoctors.jsp',300,300)"></td>
 	   </TR>
 	   <TR class=row_odd style="display: none;">
-		<TD>Doctor Id *</TD>
+		<TD>Doctor Id  <FONT COLOR="red">*</FONT></TD>
 		<TD><INPUT TYPE="TEXT" NAME="DoctorID" SIZE="10"  readonly></td>
 		</TR>
 
 	  
 	   <TR class=row_even >
-	   <TD>RoomID *</TD>
+	   <TD>RoomID  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="RoomID" SIZE="20"></TD>
 	   </TR>
 

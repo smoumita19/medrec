@@ -55,7 +55,7 @@ else{
  <TH COLSPAN="2"> Insurances Report  </TH>
  </TR>
 <TR class="row_even">
-<Td><B>Start Date</B></Td>
+<Td><B>Start Date</B> <FONT COLOR="red">*</FONT></Td>
 <TD>
 	<input type="date" size=20 id="Start" name="Start">   
 
@@ -63,7 +63,7 @@ else{
 </TD>
 </TR>
 <TR class="row_odd">
-<Td><B>End Date</B></Td>
+<Td><B>End Date</B> <FONT COLOR="red">*</FONT></Td>
 <TD>
 	<input type="date" size=20 id="End" name="End">   
 
@@ -71,8 +71,8 @@ else{
 </TD>
 
 <TR class="row_even" >
-<TD align=center><INPUT TYPE="submit" id=SUB Value="Get Report" ></TD>
-<TD align=center><INPUT id='RES' TYPE="RESET" onclick="location.reload()"></TD>
+<TD align=center><INPUT TYPE="submit" id=SUB  class="form-button" Value="Get Report"  ></TD>
+<TD align=center><INPUT id='RES' TYPE="RESET"  class="form-button" onclick="location.reload()"></TD>
 </TR>
 </TABLE>
 </form>

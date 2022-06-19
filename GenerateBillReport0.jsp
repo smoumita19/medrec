@@ -11,7 +11,6 @@
 
 <script LANGUAGE="Javascript" SRC="images/validate.js"></script>
 <script LANGUAGE="Javascript">
-<!--
 function Check()
 			{
 				var frm = document.forms[0];
@@ -19,10 +18,10 @@ function Check()
 				if (NameOfPatient=='')
 				{
 					alert("Please select NameOfPatient to Proceed");
+					return false;
 				}
-				}
+			}
 			
-//-->
 </script>
 </HEAD>
 <jsp:include page="MultiLevelmenu.htm"/><br><br><br>

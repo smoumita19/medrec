@@ -111,7 +111,7 @@ if(DisRow==0)
 	%>
 		<CENTER>
 			<tr><th colspan=6>No Records found</th></tr>
-		<input type=button value=close onclick="window.close()">
+	
 
 		</CENTER>
 	<%

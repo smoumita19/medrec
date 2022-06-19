@@ -131,7 +131,7 @@ int DisRow=0;
 	/*To write to the server if the resultset is null*/
 	%>
 		<CENTER>
-			<tr><th colspan=6>No Records found</th></tr>
+			<tr><th colspan=9>No Records found</th></tr>
 		</CENTER>
 	<%
 

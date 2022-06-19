@@ -73,7 +73,7 @@ try
 
 
 	/*Connection to MYSQL*/
-	String url = "jdbc:mysql://localhost:3306/meditracker";
+	String url = "jdbc:mysql://localhost:3306/medrec";
 	String username = "root";
 	String password = "QQQ2348QQQ";
 	//Class,forName("com.mysql.cj.jdbc.Driver");

@@ -129,49 +129,49 @@ else{
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>Name Of Patient *</TD>
+	   <TD>Name Of Patient  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="NameOfPatient" SIZE="10"  readonly><input type="button" value="Show InPatients" onclick="fnEmpPopUp('ShowPatients.jsp',300,300)"></td>
 
 	   </TR>
 
 	   <TR class=row_odd >
-	   <TD>Patient ID *</TD>
+	   <TD>Patient ID  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="PatientID" SIZE="20" readonly></TD>
 	   </TR>
 	   
 	   <TR class=row_even >
-	   <TD>Age *</TD>
+	   <TD>Age  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Age" SIZE="5" readonly></TD>
 	   </TR>
 	  
 	   <TR class=row_odd >
-	   <TD>Sex *</TD>
+	   <TD>Sex  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Sex" SIZE="10" readonly ></TD>
 	   </TR>
 
 	  
 	   <TR class=row_even >
-	   <TD>Occupation *</TD>
+	   <TD>Occupation  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Occupation" SIZE="10" readonly ></TD>
  	   </TR>
 
 	   
 	   <TR class=row_odd >
-	   <TD>Nature of illness*</TD>
+	   <TD>Nature of illness <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Natureofillness" SIZE="20" readonly></TD>
 	   </TR>
 
 	  
 	   <TR class=row_even >
-	   <TD>Date Of Admission*</TD> <TD><input type="date" size=20 readonly id="DateOfAdmission" name="DateOfAdmission">
+	   <TD>Date Of Admission <FONT COLOR="red">*</FONT></TD> <TD><input type="date" size=20 readonly id="DateOfAdmission" name="DateOfAdmission">
 	 
    	  </TD>
          </TR>
 
 	   <TR class=row_odd >
-	   <TD>Date Of Discharge *</TD>
+	   <TD>Date Of Discharge  <FONT COLOR="red">*</FONT></TD>
 	   <TD>
-		<input type="date" size=20 id="DateOfDischarge"  name="DateOfDischarge" onchange="diffInDates(this)">   
+		<input type="date" size=20 id="DateOfDischarge"  name="DateOfDischarge" onchange="diffInDates(this, event)">   
 
 		<!-- <input size=20 readonly id="DateOfDischarge" name="DateOfDischarge">
 		 <img onkeypress="fnCalendar(this)" id="imgDate" style="CURSOR: hand" onClick="fnCalendar(this);if(document.DischargeForm.DateOfAdmission.value==''){alert('Please select Date of Admission');document.DischargeForm.DateOfDischarge.value='';}else{ CalculatePeriod();}" height="16" src="images/CalDis.gif" width="16" border="0" name="imgDate" onMouseOver="fnEnableCalLookup(this)" onMouseOut="fnDisableCalLookup(this);" > -->
@@ -181,37 +181,37 @@ else{
 
 		   
 		<TR class=row_even >
-		  <TD>Period of Stay in Hospital *</TD>
+		  <TD>Period of Stay in Hospital  <FONT COLOR="red">*</FONT></TD>
 		  <TD><INPUT TYPE="TEXT" NAME="PeriodofStayinHospital" ID="PeriodofStayinHospital" SIZE="20" readonly></TD>
 		</TR>
 	  
 	   <TR class=row_even >
-	   <TD>Room ID *</TD>
+	   <TD>Room ID  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="RoomID" SIZE="20" readonly ></TD>
 	   </TR>
 
 	   <!-- <TR class=row_odd >
-	   <TD>ConsultantDoctor *</TD>
+	   <TD>ConsultantDoctor  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="ConsultantDoctor" SIZE="20" ></TD>
 	   </TR> -->
 
 	   <TR class=row_even >
-	   <TD>Consultant Doctor *</TD>
+	   <TD>Consultant Doctor  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="ReferedByDoctor" SIZE="20" readonly></TD>
 	   </TR>
 
 	   <TR class=row_even >
-		<TD>Doctor ID *</TD>
+		<TD>Doctor ID  <FONT COLOR="red">*</FONT></TD>
 		<TD><INPUT TYPE="TEXT" NAME="DoctorID" SIZE="20" readonly></TD>
 		</TR>
 
 		<TR class=row_odd style="display: none;" >
-			<TD>Insurance *</TD>
+			<TD>Insurance  <FONT COLOR="red">*</FONT></TD>
 			<TD><INPUT TYPE="HIDDEN" NAME="Insurance" SIZE="10" readonly></TD>
 		</TR>
 	
 	   <TR class=row_odd >
-	   <TD>Insurance ID*</TD>
+	   <TD>Insurance ID <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="InsuranceID" SIZE="10" readonly></TD>
 	   </TR>
 
@@ -227,16 +227,25 @@ else{
    </BODY> 
    <script>
 	// document.getElementById('DateOfDischarge').valueAsDate = new Date();
-	document.getElementById('DateOfDischarge').max = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
+	//document.getElementById('DateOfDischarge').max = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
 
-	function diffInDates(DateOfDischarge){
+	function diffInDates(DateOfDischarge, e){
 		let date1 = document.getElementById('DateOfAdmission').value;
 		//alert(date1);
 		let date2 = DateOfDischarge.value;
 		//alert(date2);
 		let diff = (new Date(date2).getTime() - new Date(date1).getTime())/(1000 * 3600 * 24);
 		//alert(diff);
-		document.getElementById('PeriodofStayinHospital').value = diff;
+		if (diff < 0) {
+			
+			e.target.value = '';
+			alert("Invalid discharge date!");
+		} else if (diff == 0 ) {
+		    document.getElementById('PeriodofStayinHospital').value = 1;
+		}
+		else {
+			document.getElementById('PeriodofStayinHospital').value = diff;
+		}
 	}
 
    </script>

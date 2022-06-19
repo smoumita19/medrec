@@ -27,7 +27,7 @@ Connection con=null;
 Statement stmt=null;
 ResultSet rs=null;
 
-String RoomID = request.getParameter("RoomID");
+/*String RoomID = request.getParameter("RoomID");*/
 String Category = request.getParameter("Category");
 /*String NoOfBeds = request.getParameter("NoOfBeds");*/
 String strChargesPerDay=request.getParameter("ChargesPerDay");
@@ -45,7 +45,9 @@ try
 	stmt =  con.createStatement();
 	
 	
-	String Query = "Insert into RoomsMaster values(\'"+RoomID+"\',\'"+Category+"\',"+ChargesPerDay+",\'"+VisitorsAllowed+"\',\'"+VisitingHours+"\',\'Empty\')";
+	/*String Query = "Insert into RoomsMaster values(\'"+RoomID+"\',\'"+Category+"\',"+ChargesPerDay+",\'"+VisitorsAllowed+"\',\'"+VisitingHours+"\',\'Empty\')";*/
+	String Query = "Insert into RoomsMaster (Category, ChargesPerDay, VisitorsAllowed, VisitingHours, Status) values (\'"+Category+"\',"+ChargesPerDay+",\'"+VisitorsAllowed+"\',\'"+VisitingHours+"\',\'Empty\')";
+
 	System.out.println(Query);
 	int rowsAffected=stmt.executeUpdate(Query);		
 	System.out.println("Rows Affected = " + rowsAffected);

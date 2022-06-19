@@ -108,7 +108,7 @@ if(DisRow==0)
 	/*To write to the server if the resultset is null*/
 	%>
 		<CENTER>
-			<tr><th colspan=6>No records found</th></tr><br><br>
+			<tr><th colspan=8>No records found</th></tr><br><br>
 		</CENTER>
 		
 

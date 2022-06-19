@@ -104,13 +104,13 @@ else{
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>Consultant Doctor Name *</TD>
+	   <TD>Consultant Doctor Name  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="DoctorName" SIZE="20" ></td>
 	   </TR>
 
 	  	   
 	   <TR class=row_odd >
-	   <TD>Date Of Join *</TD> <TD><input type="date" size=20 id="DateOfJoin" name="DateOfJoin">
+	   <TD>Date Of Join  <FONT COLOR="red">*</FONT></TD> <TD><input type="date" size=20 id="DateOfJoin" name="DateOfJoin">
 
 	   <!-- <input type="date" id="birthday" name="birthday"> -->
 	 <!-- <img onkeypress="fnCalendar(this)" id="imgDate" style="CURSOR: hand" onClick="fnCalendar(this)" height="16" src="images/CalDis.gif" width="16" border="0" name="imgDate" onMouseOver="fnEnableCalLookup(this)" onMouseOut="fnDisableCalLookup(this)" > -->
@@ -118,7 +118,7 @@ else{
          </TR>
 	   	  
 	   <TR class=row_even >
-	   <TD>Designation *</TD>
+	   <TD>Designation  <FONT COLOR="red">*</FONT></TD>
 	 <TD><select name="Designation">
 				<option value="---">---</option>
 				<option value="Anesthesiologist">Anesthesiologist</option>
@@ -142,12 +142,12 @@ else{
 	   </TR>
 
 	   <TR class=row_odd >
-	   <TD>Phone Number (0-10 Digits)*</TD>
+	   <TD>Phone Number (0-10 Digits) <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="PhoneNumber" SIZE="20" ></TD>
 	   </TR>
 	   
 	   <TR class=row_even >
-	   <TD>Experience *</TD>
+	   <TD>Experience  <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="Experience" SIZE="20" > years</TD>
 	   </TR>
 
@@ -155,7 +155,7 @@ else{
 	   
 
 	   <TR class=row_odd >
-	   <TD>Holiday in Week *</TD>
+	   <TD>Holiday in Week  <FONT COLOR="red">*</FONT></TD>
 	    <TD><select name="HolidayinWeek">
 				<option value="---">---</option>	
 				<option value="Sunday">Sunday</option>	   
@@ -170,13 +170,13 @@ else{
 	   </TR>
 	  
 	   <TR class=row_even >
-	   <TD>Working Hours (0-24) *</TD>
+	   <TD>Working Hours (0-24) <FONT COLOR="red">*</FONT></TD>
 	   <TD><INPUT TYPE="TEXT" NAME="WorkingHours" SIZE="20" ></TD>
 	   </TR>
 
 	   <TR class=row_odd >
-	   <TD>Charges Per Hour *</TD>
-	   <TD><INPUT TYPE="TEXT" NAME="ChargesPerHour" SIZE="20" >in Rupees</TD>
+	   <TD>Charges Per Hour  <FONT COLOR="red">*</FONT></TD>
+	   <TD><INPUT TYPE="TEXT" NAME="ChargesPerHour" SIZE="20" > rupees</TD>
 	   </TR>
    
 	   <TR class=row_even  ALIGN="CENTER">

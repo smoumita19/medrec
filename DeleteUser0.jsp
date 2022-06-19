@@ -34,11 +34,11 @@ else{
 	   </TR>
 		
 <TR class="row_even">
-<Td><B>UserID</B></Td>
+<Td><B>UserID</B>  <FONT COLOR="red">*</FONT></TD>
 <td><input type="text" name="UserID" size=10 readonly><input type="button" value="List Users" onclick="fnEmpPopUp('ListUsers0.jsp',300,300)"></td>
 <TR class="row_even" >
-<TD align=center><INPUT TYPE="submit" id='SUB' Value="Delete" ></TD>
-<TD align=center><INPUT id='RES' TYPE="RESET" ></TD>
+<TD align=center><INPUT TYPE="submit" id='SUB' class="form-button" Value="Delete" ></TD>
+<TD align=center><INPUT id='RES' TYPE="RESET" class="form-button" ></TD>
 			
 		
 		</TABLE>

@@ -3,7 +3,7 @@
 <%@ page import="java.sql.*,java.io.*,java.util.Random"%>
  <% String NameOfPatient = request.getParameter("NameOfPatient");%>
  <% String DateOfAdmission = request.getParameter("DateOfAdmission");%>
-<% String GaurdianName = request.getParameter("GaurdianName");%>
+<% String GaurdianName = request.getParameter("NameOfPatient");%>
 <% String RelationWithPatient = request.getParameter("RelationWithPatient");%>
 <% String Natureofillness = request.getParameter("Natureofillness");%>
   <HTML>
@@ -133,7 +133,7 @@ else{
 	
 	   <TR class=row_odd >
 	   <TD>NameOfApplicant *</TD>
-	   <TD><INPUT TYPE="TEXT" NAME="NameOfApplicant" SIZE="20" value="<%=GaurdianName%>" ></td>
+	   <TD><INPUT TYPE="TEXT" NAME="NameOfApplicant" SIZE="20" value="<%=NameOfPatient%>" ></td>
 	   </TR>
 
 	   <TR class=row_even >

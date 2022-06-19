@@ -44,13 +44,14 @@ else{
 
    <TABLE BORDER="0" CELLSPACING="2"  CELLPADDING="2" >
 	   <TR class=row_title  ALIGN="center">
-	   <TH COLSPAN="3"> Doctors Schedule </TH>
+	   <TH COLSPAN="2"> Doctors Schedule </TH>
 	   </TR>
 	   <TR class=row_even >
-	   <TD>DoctorName *</TD>
-	   <TD><INPUT TYPE="TEXT" NAME="DoctorName" SIZE="10" readonly></TD><td><input type="button" value="List Doctors" onclick="fnEmpPopUp('ListDoctors.jsp',300,300)"></TD>
+	   <TD>DoctorName  <FONT COLOR="red">*</FONT></TD>
+	   <TD><INPUT TYPE="TEXT" NAME="DoctorName" SIZE="10" readonly><input type="button" value="List Doctors" onclick="fnEmpPopUp('ListDoctors.jsp',300,300)"></TD>
 	   </TR>
-	   <TR class=row_odd  ALIGN="CENTER">
+	   <TR class=row_odd ALIGN="center">
+		
 			<TD><INPUT TYPE="SUBMIT" VALUE="GetReport" class="form-button" ></TD>
 			<TD><INPUT TYPE="RESET" VALUE="Clear" class="form-button"></TD>
 		</TR>
